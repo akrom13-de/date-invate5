@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta name="theme-color" content="#f6d9df">
+
+  <title>A Little Question for Xadicha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <!-- Background -->
+  <div class="background-glow"></div>
+
+  <div
+    class="petals"
+    id="petals"
+    aria-hidden="true"
+  ></div>
+
+
+  <!-- Flower decorations -->
+
+  <img
+    src="images/flowers.jpg"
+    class="flower flower-left"
+    alt=""
+    aria-hidden="true"
+  >
+
+  <img
+    src="images/flowers.jpg"
+    class="flower flower-right"
+    alt=""
+    aria-hidden="true"
+  >
+
+
+  <!-- MAIN -->
+
+  <main class="app">
+
+
+    <!-- =========================
+         INVITATION
+    ========================== -->
+
+    <section
+      id="inviteScreen"
+      class="screen active"
+    >
+
+      <div class="card invitation-card">
+
+        <div class="eyebrow">
+          A little something for you
+        </div>
+
+
+        <!-- Cat -->
+
+        <div class="main-cat-container">
+
+          <img
+            src="images/pink-cat.jpg"
+            class="main-cat"
+            alt="Cute pink cat"
+          >
+
+        </div>
+
+
+        <div class="name">
+          Xadicha
+        </div>
+
+
+        <h1>
+          I have a little question
+          <span>for you.</span>
+        </h1>
+
+
+        <p class="intro">
+          There's something I've been
+          meaning to ask you...
+        </p>
+
+
+        <div class="question">
+          Will you go on a date with me?
+        </div>
+
+
+        <!-- Buttons -->
+
+        <div
+          class="button-zone"
+          id="buttonZone"
+        >
+
+          <button
+            id="yesButton"
+            class="btn yes-button"
+            type="button"
+          >
+            Yes, I will
+          </button>
+
+
+          <button
+            id="noButton"
+            class="btn no-button"
+            type="button"
+          >
+            No
+          </button>
+
+        </div>
+
+
+        <!-- Hint -->
+
+        <div
+          id="hint"
+          class="hint"
+          aria-live="polite"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         YES MESSAGE
+    ========================== -->
+
+    <section
+      id="yesScreen"
+      class="screen"
+      hidden
+    >
+
+      <div class="card message-card">
+
+        <div class="small-label">
+          Wait...
+        </div>
+
+
+        <h2>
+          I honestly wasn't
+          expecting you to say
+          <span>yes...</span>
+        </h2>
+
+
+        <p>
+          But I'm definitely not
+          complaining.
+        </p>
+
+
+        <div class="divider"></div>
+
+
+        <p class="date-question">
+          So... when are we making
+          it official?
+        </p>
+
+
+        <button
+          id="chooseDateButton"
+          class="btn yes-button wide"
+          type="button"
+        >
+          Choose a date
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CALENDAR
+    ========================== -->
+
+    <section
+      id="calendarScreen"
+      class="screen"
+      hidden
+    >
+
+      <div class="card calendar-card">
+
+        <div class="small-label">
+          One important decision
+        </div>
+
+
+        <h2>
+          Pick our
+          <span>date.</span>
+        </h2>
+
+
+        <p class="calendar-description">
+          Choose a day that feels right.
+        </p>
+
+
+        <!-- Calendar header -->
+
+        <div class="calendar-header">
+
+          <button
+            id="prevMonth"
+            class="month-button"
+            type="button"
+            aria-label="Previous month"
+          >
+            ‹
+          </button>
+
+
+          <div
+            id="monthLabel"
+            class="month-label"
+          ></div>
+
+
+          <button
+            id="nextMonth"
+            class="month-button"
+            type="button"
+            aria-label="Next month"
+          >
+            ›
+          </button>
+
+        </div>
+
+
+        <!-- Weekdays -->
+
+        <div class="weekdays">
+
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+          <span>Sun</span>
+
+        </div>
+
+
+        <!-- Days -->
+
+        <div
+          id="calendarGrid"
+          class="calendar-grid"
+        ></div>
+
+
+        <!-- Selected date -->
+
+        <div
+          id="selectedDate"
+          class="selected-date"
+        >
+          Choose a day above
+        </div>
+
+
+        <button
+          id="confirmDate"
+          class="btn yes-button wide"
+          type="button"
+          disabled
+        >
+          Continue
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+
+    <section
+      id="finalScreen"
+      class="screen"
+      hidden
+    >
+
+      <div class="card final-card">
+
+
+        <!-- Final image -->
+
+        <div class="final-image-container">
+
+          <img
+            src="images/date-cat.jpg"
+            class="final-cat"
+            alt="Cute cat with pink flowers"
+          >
+
+        </div>
+
+
+        <div class="small-label">
+          It's official
+        </div>
+
+
+        <h2>
+          It's a
+          <span>date.</span>
+        </h2>
+
+
+        <div
+          id="finalDate"
+          class="final-date"
+        ></div>
+
+
+        <p>
+          I'll be looking forward to it.
+        </p>
+
+
+        <button
+          id="startOver"
+          class="restart-button"
+          type="button"
+        >
+          Start over
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
